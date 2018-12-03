@@ -25,6 +25,6 @@ public class RedisController {
     @GetMapping("get/{key}")
     @ApiOperation(value = "根据key获取缓存")
     public String get(@PathVariable("key") String key) {
-        return "bigkey=" + key + ",bigvalue=" + redisTemplate.opsForValue().get(key);
+        return "key=" + key + ",value=" + redisTemplate.opsForValue().get(key);
     }
 }
